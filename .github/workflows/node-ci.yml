@@ -24,5 +24,8 @@ jobs:
       - name: Ejecutar pruebas
         run: npm test
 
-      - name: Ver entorno
+      - name: Ver entorno desde secret
         run: 'echo "Entorno actual: ${{ secrets.NODE_ENV }}"'
+
+      - name: Ver entorno desde variable de entorno
+        run: 'echo "Entorno actual: ${{ vars.NODE_ENV_VAR }}"'
